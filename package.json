@@ -2,7 +2,7 @@
   "name": "week-5-dgjm",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "node tests.js | tap-spec",
     "lint": "eslint ."
