@@ -1,0 +1,23 @@
+{
+  "name": "week-5-dgjm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-17/week-5-dgjm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-17/week-5-dgjm/issues"
+  },
+  "homepage": "https://github.com/fac-17/week-5-dgjm#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  }
+}
