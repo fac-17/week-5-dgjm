@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "node tests.js | tap-spec",
     "lint": "eslint ."
   },
