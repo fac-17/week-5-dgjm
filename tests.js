@@ -1,6 +1,8 @@
 const test = require("tape");
+const router = require("./src/router");
 const myRequest = require("./src/api");
 const nock = require("nock");
+const supertest = require("supertest");
 
 test("Testing tape", t => {
   t.pass("Tape is working yayyy");
@@ -36,4 +38,15 @@ test("myRequest fetches data correctly", t => {
       t.end();
     }
   );
+});
+
+test("404 route",(t)=>{
+  supertest(router)
+   .get('/fhkwefhe')
+   .expect(404)
+   .end( (err,res)=>{
+       t.error(err);
+       t.equal(res.text,`<h1>404 page not found</h1>`,'Should return 404 page not found');
+       t.end();
+   })
 });
