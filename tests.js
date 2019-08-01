@@ -1,6 +1,6 @@
 const test = require("tape");
 const router = require("./src/router");
-const myRequest = require("./src/api");
+const { myRequest } = require("./src/api");
 const nock = require("nock");
 const supertest = require("supertest");
 
@@ -8,12 +8,6 @@ test("Testing tape", t => {
   t.pass("Tape is working yayyy");
   t.end();
 });
-
-// test("Test fetches JSON data.", t => {
-//   const actual = myRequest("http://jsonplaceholder.typicode.com/users/1", (null, res) => {
-//
-//   })
-// });
 
 test("myRequest fetches data correctly", t => {
   nock("http://jsonplaceholder.typicode.com")
