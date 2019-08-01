@@ -6,31 +6,48 @@
   color: #f5f3f5;
 }
 
-h1 {
-  font-size: 8rem;
+body {
+  min-width: 600px;
 }
 
-.result {
-  font-size: 3rem;
+h1 {
+  font-size: 3em;
+}
+
+#british-segway {
+  margin: 30px auto 10px auto;
+  width: 70vw;
+  max-width: 400px;
+  display: block;
 }
 
 #input {
-  font-size: 3rem;
+  font-size: 2em;
   background-color: #302b27;
+  border-radius: 3px;
+  margin: 5px;
 }
 
 #search {
   /* height: 4em;
   width: 8em; */
-  font-size: 3rem;
+  margin: 5px;
+  font-size: 2em;
   background-color: #a40d1b;
+  border-radius: 3px;
 }
 
 #result-display {
-  font-size: 4rem;
+  font-size: 2em;
   /* border-style: solid; */
 }
 
-#deportation {
-  font-size: 4rem;
+
+#countdown-copy {
+  color: #a40d1b;
+  font-size: 2rem;
+}
+
+#countdown-time {
+  font-size: 2rem;
 }

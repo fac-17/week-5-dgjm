@@ -4,21 +4,18 @@ search.onclick = function() {
   let input = document.getElementById("input").value;
   console.log(input);
   getQuery(input);
+  oldRates(input);
 };
 
 function getQuery(input) {
-  //delete old data
-
-  let text = document.getElementById("result-display");
-  text.innerText = `1 GBP today equals...`;
-
   let xhr = new XMLHttpRequest();
   let url = `query?=${input}`;
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let response = JSON.parse(xhr.responseText);
       let text = document.getElementById("result-display");
-      text.innerText = `1 GBP today equals ${response[input]} ${input}`;
+      text.innerText = `1 GBP today equals ${Math.round(response[input] * 100) /
+        100} ${input}`;
 
       console.log(response[input]);
     }
@@ -27,12 +24,34 @@ function getQuery(input) {
   xhr.send();
 }
 
-var countdown = "test";
+// function getQuery(input) {
+//   let xhr = new XMLHttpRequest();
+//   let url = `query?=${input}`;
+//   xhr.onreadystatechange = function() {
+//     if (xhr.readyState == 4 && xhr.status == 200) {
+//       let response = JSON.parse(xhr.responseText);
+//       let text = document.getElementById("result-display");
+//       text.innerText = `1 GBP today equals ${response[input]} ${input}`;
+//
+//       console.log(response[input]);
+//     }
+//   };
+//   xhr.open("GET", url, true);
+//   xhr.send();
+// }
 
-window.onload = function() {
-  console.log("this is working");
-  document.getElementById("deportation").innerText = countdown;
-};
+function updateCountdown() {
+  var deadline = new Date("oct 31, 2019, 23:00:00").getTime();
+  var now = new Date().getTime();
+  var t = deadline - now;
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  document.getElementById(
+    "countdown-time"
+  ).innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+}
 
 // document.onload = alert("test");
 
@@ -47,14 +66,17 @@ var oldExchangeRates = {
   NZD: "2.3473"
 };
 
-search.onclick = function() {
-  let input = document.getElementById("input").value;
-  console.log(input);
+function oldRates(input) {
+  let input2 = input;
+  // let input2 = document.getElementById("input").value;
+  console.log(input2);
   // document.getElementById("old-rate") = oldExchangeRates[input];
   document.getElementById("old-rate").innerText =
     "On 21st July 2015, 1 GBP was " +
-    oldExchangeRates[input] +
+    oldExchangeRates[input2] +
     " " +
-    input +
+    input2 +
     ".";
-};
+}
+
+setInterval(updateCountdown, 1000);
