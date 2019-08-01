@@ -1,6 +1,8 @@
 const test = require("tape");
+const router = require("./src/router");
 const myRequest = require("./src/api");
 const nock = require("nock");
+const supertest = require("supertest");
 
 test("Testing tape", t => {
   t.pass("Tape is working yayyy");
@@ -79,20 +81,33 @@ test("myRequest fetches JSON", t => {
       },
       date: "2019-07-31"
     });
-    myRequest("http://api.ratesapi.io/api/latest", 
-    (error, response) => {
-      t.error(error);
+  myRequest("http://api.ratesapi.io/api/latest", (error, response) => {
+    t.error(error);
+    t.equal(
+      response.statusCode,
+      200,
+      "the API should respond with a status code of 200"
+    );
+    t.deepEqual(
+      response.body.base,
+      "EUR",
+      "the response body.base should return EUR"
+    );
+    t.end();
+  });
+});
+
+test("404 route", t => {
+  supertest(router)
+    .get("/fhkwefhe")
+    .expect(404)
+    .end((err, res) => {
+      t.error(err);
       t.equal(
-        response.statusCode,
-        200,
-        "the API should respond with a status code of 200"
-      );
-      t.deepEqual(
-        response.body.base,
-        "EUR",
-        "the response body.base should return EUR"
+        res.text,
+        `<h1>404 page not found</h1>`,
+        "Should return 404 page not found"
       );
       t.end();
-    }
-    );
+    });
 });
