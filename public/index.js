@@ -14,7 +14,7 @@ function getQuery(input) {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let response = JSON.parse(xhr.responseText);
       let text = document.getElementById("result-display");
-      text.innerText = `1 GBP today equals ${response[input]} ${input}`;
+      text.innerText = `1 GBP today equals ${Math.round(response[input] * 100) / 100} ${input}`;
 
       console.log(response[input]);
     }
