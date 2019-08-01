@@ -1,0 +1,27 @@
+* {
+  font-family: Helvetica;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #1b264f;
+  color: #f5f3f5;
+}
+
+h1 {
+  font-size: 8em;
+}
+
+.result {
+  font-size: 3em;
+}
+
+#input {
+  font-size: 3em;
+  background-color: #302b27;
+}
+
+#search {
+  /* height: 4em;
+  width: 8em; */
+  font-size: 3em;
+  background-color: #a40d1b;
+}
