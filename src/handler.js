@@ -35,14 +35,14 @@ function handlePublic(req, res, endpoint) {
 }
 
 function handleQuery(req, res, endpoint) {
-  let input = endpoint.split('=')[1];
+  //let input = endpoint.split('=')[1];
   let url = "http://api.ratesapi.io/api/latest";
 
   myRequest(url, (err, result) => {
     if(err) {
         res.end("Error");
     } else {
-      res.end(JSON.stringify(result.body.rates.GBP));
+      res.end(JSON.stringify(result.body.rates));
     }
   });
 
