@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { myRequest } = require('./api');
 
 function handleHome(req, res, endpoint) {
     const filePath = path.join(__dirname, '..', 'public', 'index.html');
@@ -33,4 +34,18 @@ function handlePublic(req, res, endpoint) {
     });
 }
 
-module.exports = { handleHome, handlePublic};
+function handleQuery(req, res, endpoint) {
+  let input = endpoint.split('=')[1];
+  let url = "http://api.ratesapi.io/api/latest";
+
+  myRequest(url, (err, result) => {
+    if(err) {
+        res.end("Error");
+    } else {
+      res.end(JSON.stringify(result.body.rates.GBP));
+    }
+  });
+
+  }
+
+module.exports = { handleHome, handlePublic, handleQuery };
