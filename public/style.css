@@ -7,30 +7,37 @@
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 3em;
 }
 
-.result {
-  font-size: 3rem;
-}
+
 
 #input {
-  font-size: 3rem;
+  font-size: 2em;
   background-color: #302b27;
+  border-radius: 3px;
+  margin: 5px;
 }
 
 #search {
   /* height: 4em;
   width: 8em; */
-  font-size: 3rem;
+  margin: 5px;
+  font-size: 2em;
   background-color: #a40d1b;
+  border-radius: 3px;
 }
 
 #result-display {
-  font-size: 4rem;
+  font-size: 2em;
   /* border-style: solid; */
 }
 
-#deportation {
-  font-size: 4rem;
+
+#countdown-copy {
+  font-size: 2rem;
+}
+
+#countdown-time {
+  font-size: 2rem;
 }
