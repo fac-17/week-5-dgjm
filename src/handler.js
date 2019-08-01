@@ -21,7 +21,8 @@ function handlePublic(req, res, endpoint) {
     const extensionType = {
         css: "text/css",
         js: "text/js",
-        ico: "image/x-icon"
+        ico: "image/x-icon",
+        png: "image/png"
     };
     const filePath = path.join(__dirname, '..', endpoint);
     fs.readFile(filePath, (err, file) => {
