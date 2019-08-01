@@ -19,3 +19,12 @@ function getQuery(input) {
   xhr.open("GET", url, true);
   xhr.send();
 }
+
+var countdown = "test";
+
+window.onload = function() {
+  console.log("this is working");
+  document.getElementById("deportation").innerText = countdown;
+};
+
+// document.onload = alert("test");
