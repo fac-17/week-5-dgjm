@@ -1,0 +1,36 @@
+* {
+  font-family: Helvetica;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #1b264f;
+  color: #f5f3f5;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+.result {
+  font-size: 3rem;
+}
+
+#input {
+  font-size: 3rem;
+  background-color: #302b27;
+}
+
+#search {
+  /* height: 4em;
+  width: 8em; */
+  font-size: 3rem;
+  background-color: #a40d1b;
+}
+
+#result-display {
+  font-size: 4rem;
+  /* border-style: solid; */
+}
+
+#deportation {
+  font-size: 4rem;
+}
