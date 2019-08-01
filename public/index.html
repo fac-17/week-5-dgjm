@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>API backend call</title>
-        <meta name="description" content="backend API app using Node.js">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="public/style.css">
-    </head>
-    <body>
-        <h1>Hello world!</h1> 
-        <input id='input' type='text' placeholder="Search here..." aria-label="This is an input for your search term">
-        <button id='search' for='input' aria-label="Click this button to submit your search term">Search</button>
-        <script src="public/index.js" ></script>
-    </body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>API backend call</title>
+    <meta name="description" content="backend API app using Node.js" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <h1>#ProjectFear</h1>
+    <select
+      id="input"
+      type="text"
+      placeholder="Search here..."
+      aria-label="This is an input for your search term"
+    >
+      <option class="dropdown-option" value="USD">US dollar</option>
+      <option class="dropdown-option" value="JPY">Japanese yen</option>
+      <option class="dropdown-option" value="GBP">Pound sterling</option>
+      <option class="dropdown-option" value="AUD">Australian dollar</option>
+      <option class="dropdown-option" value="CAD">Canadian dollar</option>
+      <option class="dropdown-option" value="CHF">Swiss franc</option>
+      <option class="dropdown-option" value="SEK">Swedish krona</option>
+      <option class="dropdown-option" value="NZD">New Zealand dollar</option>
+    </select>
+    <button
+      id="search"
+      for="input"
+      aria-label="Click this button to submit your search term"
+    >
+      Search
+    </button>
+    <section class="result">
+      <p>The current exchange rate is:</p>
+      <p id="result-display"></p>
+    </section>
+    <script src="public/index.js"></script>
+  </body>
 </html>
