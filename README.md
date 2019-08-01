@@ -30,6 +30,7 @@
  
 - Display live information on the Pound vs other currencies 💰
 - Display a live countdown to Brexit ⏱
+![Boris on zipline](https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/26/1467287656-tumblr-inline-mkvntak0yo1qz4rgp.gif)
 - Allow users to watch the UK economy crash in real time.. or not #projectfear 😱
 
 ## Stretch goals 🤸‍♀️
