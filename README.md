@@ -73,6 +73,8 @@
 
 ## What we struggled with 🙈
 
+![programmer-morale-graph](https://i.redd.it/d0dxcnw57kb01.jpg)
+
 - Making the backend and frontend communicate with each other (at first)
 - Improving on the api function we looked at this week 
 - npm issues - one computer reverting to old version of npm caused bugs
