@@ -36,7 +36,7 @@ function handlePublic(req, res, endpoint) {
 
 function handleQuery(req, res, endpoint) {
   //let input = endpoint.split('=')[1];
-  let url = "http://api.ratesapi.io/api/latest";
+  let url = "http://api.ratesapi.io/api/latest?base=GBP";
 
   myRequest(url, (err, result) => {
     if(err) {
