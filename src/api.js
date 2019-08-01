@@ -18,4 +18,4 @@ const myRequest = (url, cb) => {
     .on("error", err => cb(err));
 };
 
-module.exports = myRequest;
+module.exports = { myRequest };
