@@ -7,21 +7,30 @@
 }
 
 h1 {
-  font-size: 8em;
+  font-size: 8rem;
 }
 
 .result {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 #input {
-  font-size: 3em;
+  font-size: 3rem;
   background-color: #302b27;
 }
 
 #search {
   /* height: 4em;
   width: 8em; */
-  font-size: 3em;
+  font-size: 3rem;
   background-color: #a40d1b;
+}
+
+#result-display {
+  font-size: 4rem;
+  /* border-style: solid; */
+}
+
+#deportation {
+  font-size: 4rem;
 }
