@@ -8,9 +8,19 @@
         <link rel="stylesheet" href="public/style.css">
     </head>
     <body>
-        <h1>Hello world!</h1> 
-        <input id='input' type='text' placeholder="Search here..." aria-label="This is an input for your search term">
+        <h1>Hello world!</h1>
+        <select id='input' type='text' placeholder="Search here..." aria-label="This is an input for your search term">
+          <option class="dropdown-option" value="USD">US dollar</option>
+          <option class="dropdown-option" value="JPY">Japanese yen</option>
+          <option class="dropdown-option" value="GBP">Pound sterling</option>
+          <option class="dropdown-option" value="AUD">Australian dollar</option>
+          <option class="dropdown-option" value="CAD">Canadian dollar</option>
+          <option class="dropdown-option" value="CHF">Swiss franc</option>
+          <option class="dropdown-option" value="SEK">Swedish krona</option>
+          <option class="dropdown-option" value="NZD">New Zealand dollar</option>
+        </select>
         <button id='search' for='input' aria-label="Click this button to submit your search term">Search</button>
+
         <script src="public/index.js" ></script>
     </body>
 </html>
