@@ -7,10 +7,6 @@ search.onclick = function() {
 };
 
 function getQuery(input) {
-    //delete old data
-
-    let text = document.getElementById("result-display");
-    text.innerText = `1 GBP today equals...`;
 
   let xhr = new XMLHttpRequest();
   let url = `query?=${input}`;
