@@ -7,10 +7,6 @@ search.onclick = function() {
 };
 
 function getQuery(input) {
-    //delete old data
-
-    let text = document.getElementById("result-display");
-    text.innerText = `1 GBP today equals...`;
 
   let xhr = new XMLHttpRequest();
   let url = `query?=${input}`;
@@ -36,7 +32,7 @@ function updateCountdown () {
   var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
   var minutes = Math.floor((t%(1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((t% (1000 * 60)) / 1000);
-  document.getElementById("deportation").innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+  document.getElementById("countdown-time").innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 }
 
 setInterval(updateCountdown, 1000);

@@ -6,11 +6,20 @@
   color: #f5f3f5;
 }
 
+body {
+  min-width: 600px;
+}
+
 h1 {
   font-size: 3em;
 }
 
-
+#british-segway {
+  margin: 30px auto 10px auto;
+  width: 70vw;
+  max-width: 400px;
+  display: block;
+}
 
 #input {
   font-size: 2em;
@@ -35,6 +44,7 @@ h1 {
 
 
 #countdown-copy {
+  color: #a40d1b;
   font-size: 2rem;
 }
 
