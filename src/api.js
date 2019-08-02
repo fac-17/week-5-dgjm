@@ -1,9 +1,11 @@
 "use strict";
 
 const http = require("http");
+const https = require("https");
 
 const myRequest = (url, cb) => {
-  http
+  const protocol = url.includes("https") ? https : http;
+  protocol
     .get(url, response => {
       let data = "";
       response.on("data", chunk => {
