@@ -105,3 +105,28 @@ test("404 route", t => {
       t.end();
     });
 });
+
+test("home route should return status code 200", t => {
+  supertest(router)
+    .get("/")
+    .expect(200)
+    .expect("Content-type", /html/)
+    .end((err, res) => {
+      t.error(err);
+      t.equal(res.statusCode, 200, "should return 200");
+      t.end();
+    });
+});
+
+test("Is styling being rendered in home route", t => {
+  supertest(router)
+    .get("/public/style.css")
+    .expect(200)
+    .expect("Content-type", /css/)
+    .end((err, res) => {
+      t.error(err);
+      t.equal(res.statusCode, 200, "should render css in home route");
+      t.end();
+    });
+});
+
