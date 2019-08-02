@@ -152,6 +152,45 @@ function oldRates(input) {
 
 ---
 
+### Testing home route
+
+```javascript
+test("home route should return status code 200", t => {
+  supertest(router)
+    .get("/")
+    .expect(200)
+    .expect("Content-type", /html/)
+    .end((err, res) => {
+      t.error(err);
+      t.equal(res.statusCode, 200, "should return 200");
+      t.end();
+    });
+});
+```
+
+---
+
+### Testing 404 route
+
+```javascript
+test("404 route", t => {
+  supertest(router)
+    .get("/fhkwefhe")
+    .expect(404)
+    .end((err, res) => {
+      t.error(err);
+      t.equal(
+        res.text,
+        `<h1>404 page not found</h1>`,
+        "Should return 404 page not found"
+      );
+      t.end();
+    });
+});
+```
+
+---
+
 ## What we would have liked to improve 🏹
 
 - We weren't able to use input validation to the back-end with our site design.
