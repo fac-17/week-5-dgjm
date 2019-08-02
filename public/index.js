@@ -2,11 +2,11 @@ let search = document.getElementById("search");
 
 search.onclick = function() {
   let input = document.getElementById("input").value;
-  console.log(input);
   getQuery(input);
   oldRates(input);
 };
 
+//FUNCTION FOR GETTING CURRENCIES
 function getQuery(input) {
   let xhr = new XMLHttpRequest();
   let url = `query?=${input}`;
@@ -16,29 +16,13 @@ function getQuery(input) {
       let text = document.getElementById("result-display");
       text.innerText = `1 GBP today equals ${Math.round(response[input] * 100) /
         100} ${input}`;
-
-      console.log(response[input]);
     }
   };
   xhr.open("GET", url, true);
   xhr.send();
 }
 
-// function getQuery(input) {
-//   let xhr = new XMLHttpRequest();
-//   let url = `query?=${input}`;
-//   xhr.onreadystatechange = function() {
-//     if (xhr.readyState == 4 && xhr.status == 200) {
-//       let response = JSON.parse(xhr.responseText);
-//       let text = document.getElementById("result-display");
-//       text.innerText = `1 GBP today equals ${response[input]} ${input}`;
-//
-//       console.log(response[input]);
-//     }
-//   };
-//   xhr.open("GET", url, true);
-//   xhr.send();
-// }
+//COUNTDOWN
 
 function updateCountdown() {
   var deadline = new Date("oct 31, 2019, 23:00:00").getTime();
@@ -53,7 +37,7 @@ function updateCountdown() {
   ).innerText = `${days} days\n${hours} hours\n${minutes} minutes\n${seconds} seconds`;
 }
 
-// document.onload = alert("test");
+// HARDCODED OLD DATA
 
 var oldExchangeRates = {
   EUR: "1.44",
@@ -68,9 +52,7 @@ var oldExchangeRates = {
 
 function oldRates(input) {
   let input2 = input;
-  // let input2 = document.getElementById("input").value;
   console.log(input2);
-  // document.getElementById("old-rate") = oldExchangeRates[input];
   document.getElementById("old-rate").innerText =
     "On 21st July 2015, 1 GBP was " +
     oldExchangeRates[input2] +
