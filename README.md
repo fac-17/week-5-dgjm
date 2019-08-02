@@ -33,9 +33,14 @@
 
 ---
 
+![](https://i.imgur.com/NOtkGau.png)
+![](https://i.imgur.com/PecIvVp.png)
+
 ## User Journey 🚀
  
 - Display live information on the Pound vs other currencies 💰
+
+![](https://i.imgur.com/Of1Zl5i.jpg)
 
 - Display a live countdown to Brexit ⏱
 ![Boris on zipline](https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/26/1467287656-tumblr-inline-mkvntak0yo1qz4rgp.gif)
