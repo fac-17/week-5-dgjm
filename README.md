@@ -83,6 +83,22 @@
 
 ---
 
+## Installation list :vhs:
+
+- `$git clone` the repo
+- `$ npm install`
+- `$ npm start` 
+
+devDependencies used: 
+
+- tape 
+- tap-spec
+- supertest 
+- nock
+- eslint
+
+---
+
 ## Code snippets 👾
 
 - ...
