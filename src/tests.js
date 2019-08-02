@@ -1,6 +1,6 @@
 const test = require("tape");
-const router = require("./src/router");
-const { myRequest } = require("./src/api");
+const router = require("./router");
+const { myRequest } = require("./api");
 const nock = require("nock");
 const supertest = require("supertest");
 
