@@ -1,5 +1,5 @@
 * {
-  font-family: Helvetica;
+  font-family: 'Permanent Marker', cursive;
   text-align: center;
   vertical-align: middle;
   background-color: #1b264f;
@@ -26,6 +26,7 @@ h1 {
   background-color: #302b27;
   border-radius: 3px;
   margin: 5px;
+  cursor: pointer;
 }
 
 #search {
@@ -35,6 +36,7 @@ h1 {
   font-size: 2em;
   background-color: #a40d1b;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 #result-display {
@@ -44,7 +46,7 @@ h1 {
 
 
 #countdown-copy {
-  color: #a40d1b;
+  color: #EDBFC5;
   font-size: 2rem;
 }
 
