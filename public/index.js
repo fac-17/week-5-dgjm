@@ -56,14 +56,14 @@ function updateCountdown() {
 // document.onload = alert("test");
 
 var oldExchangeRates = {
-  EUR: "1.4372",
-  USD: "1.5558",
-  JPY: "192.7117",
-  AUD: "2.0949",
-  CAD: "2.0139",
-  CHF: "1.4911",
-  SEK: "13.2891",
-  NZD: "2.3473"
+  EUR: "1.44",
+  USD: "1.56",
+  JPY: "192.71",
+  AUD: "2.09",
+  CAD: "2.01",
+  CHF: "1.49",
+  SEK: "13.29",
+  NZD: "2.35"
 };
 
 function oldRates(input) {
