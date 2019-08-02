@@ -1,11 +1,15 @@
 # [Currency-watch](https://week-5-dgjm.herokuapp.com/) 🤯
 [![Build Status](https://travis-ci.org/fac-17/week-5-dgjm.svg?branch=master)](https://travis-ci.org/fac-17/week-5-dgjm)
 
+---
+
 ## Team
 [Gigi](https://github.com/gminova) :smiley:  
 [Collete](https://github.com/Coletterbox) :satisfied:  
 [Victor](https://github.com/victormasson21) :sunglasses:  
 [Andy](https://github.com/andy-mc-donald) :wink:  
+
+---
 
 ## Tech stack 👀
 1. Front-end(Vanilla.js, CSS, HTML)
@@ -14,29 +18,35 @@
 4. Testing (Nock, Tape, Supertest)
 5. Continous Integration with Travis
 6. Deployment with Heroku
-7. [Rates API](http://api.ratesapi.io/api/latest?base=GBP) 
+7. [Rates API](https://api.exchangeratesapi.io/api/latest?base=GBP) 
 
+---
 
-## Goals 🥅
+## Installation & Set-up :vhs:
 
-#### Stretch goals 🤸‍♀️
-
-- [ ] Make the project responsive and accessible
-- [x] Add a countdown watch
+- `$ git clone git@github.com:fac-17/week-5-dgjm.git`
+- `$ npm install`
+- `$ npm start` 
+### *Bonus:*
+- `$ npm test` for tests
+- `$ npm run lint` for lint warnings/errors
 
 ---
 
 ## User Journey 🚀
  
 - Display live information on the Pound vs other currencies 💰
+
 - Display a live countdown to Brexit ⏱
 ![Boris on zipline](https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/26/1467287656-tumblr-inline-mkvntak0yo1qz4rgp.gif)
+
 - Allow users to watch the UK economy crash in real time.. or not #projectfear 😱
+
+---
 
 ## Stretch goals 🤸‍♀️
 - [ ] Display a random gif of Boris Johnson looking like a fool 🤡
 - [ ] Dislay live departures from Heathrow Airport to more exotic peaceful lands 🌴
-
 
 ---
 
@@ -76,6 +86,8 @@
 
 ![programmer-morale-graph](https://i.redd.it/d0dxcnw57kb01.jpg)
 
+---
+
 - Making the backend and frontend communicate with each other (at first)
 - Improving on the api function we looked at this week 
 - npm issues - one computer reverting to old version of npm caused bugs
@@ -83,38 +95,76 @@
 
 ---
 
-## Installation list :vhs:
-
-- `$git clone` the repo
-- `$ npm install`
-- `$ npm start` 
-
-devDependencies used: 
-
-- tape 
-- tap-spec
-- supertest 
-- nock
-- eslint
-
----
-
 ## Code snippets 👾
 
-- ...
-- ...
-- ...
+### Dodging the https trap
 
+```javascript
+const http = require("http");
+const https = require("https");
+
+const myRequest = (url, cb) => {
+  const protocol = url.includes("https") ? https : http;
+  protocol
+    .get(url, response => {
+        // code....
+    })
+    .on("error", err => cb(err));
+};
+```
+---
+
+### Countdown function
+
+```javascript
+function updateCountdown() {
+  var deadline = new Date("oct 31, 2019, 23:00:00").getTime();
+  var now = new Date().getTime();
+  var t = deadline - now;
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  document.getElementById("countdown-time").innerText =
+  `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+}
+
+```
+---
+
+### 2015 rates comparison
+
+```javascript
+var oldExchangeRates = {
+  EUR: "1.44",
+  USD: "1.56",
+  JPY: "192.71",
+  // etc
+};
+
+function oldRates(input) {
+  let input2 = input;
+  document.getElementById("old-rate").innerText =
+    "On 21st July 2015, 1 GBP was " +
+    oldExchangeRates[input2] + " " + input2 + ".";
+}
+```
 
 ---
 
 ## What we would have liked to improve 🏹
 
-- Didn't have time to finish our stretch goals
-- We weren't able to use input validation to the back-end with our site design 
+- We weren't able to use input validation to the back-end with our site design.
+- Didn't have time to finish our stretch goals.
+- Provide exchange rate variation percentages since 2015.
 
 ---
 
 ## Questions from us 🧐
-
+ 
 - Will we get a red, white and blue Brexit? 
+
+#### PS: Thanks Babyfather for letting us rip off his album cover
+(We didn't actually ask 🙊)
+
+![](https://i.imgur.com/s0FjbLL.jpg)
