@@ -54,11 +54,7 @@ function oldRates(input) {
   let input2 = input;
   console.log(input2);
   document.getElementById("old-rate").innerText =
-    "On 21st July 2015, 1 GBP was " +
-    oldExchangeRates[input2] +
-    " " +
-    input2 +
-    ".";
+    "On 21st July 2015, 1 GBP was " + oldExchangeRates[input2] + " " + input2;
 }
 
 setInterval(updateCountdown, 1000);
