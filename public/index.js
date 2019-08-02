@@ -34,7 +34,7 @@ function updateCountdown() {
   var seconds = Math.floor((t % (1000 * 60)) / 1000);
   document.getElementById(
     "countdown-time"
-  ).innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+  ).innerText = `${days} days\n${hours} hours\n${minutes} minutes\n${seconds} seconds`;
 }
 
 // HARDCODED OLD DATA
