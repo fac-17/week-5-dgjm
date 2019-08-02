@@ -12,22 +12,26 @@ body {
 
 h1 {
   font-size: 3em;
+  letter-spacing: 3px;
 }
 
 #british-segway {
-  margin: 30px auto 10px auto;
+  margin: 50px auto 30px auto;
   width: 70vw;
   max-width: 400px;
   display: block;
 }
 
 #input {
-  font-size: 2em;
+  font-size: 1.4em;
   background-color: #302b27;
   border-radius: 3px;
   margin: 5px;
   cursor: pointer;
+  padding: 5px;
+  font-family: 'Permanent Marker', cursive;
 }
+
 
 #search {
   /* height: 4em;
